@@ -83,10 +83,6 @@ const config: Config = {
               label: "Documentation",
               to: "/docs/getting-started",
             },
-            {
-              label: "Examples",
-              to: "/examples/basic",
-            },
           ],
         },
         {
