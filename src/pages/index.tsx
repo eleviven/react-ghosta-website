@@ -1,81 +1,45 @@
-import clsx from "clsx";
-import Link from "@docusaurus/Link";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import Link from "@docusaurus/Link";
 import Layout from "@theme/Layout";
 import Heading from "@theme/Heading";
-import { Feature, FeatureItemProps } from "../components";
+import clsx from "clsx";
 
-import styles from "./index.module.css";
+import { Badges, Features } from "../widgets";
 
-const FeatureList: FeatureItemProps[] = [
-  {
-    title: "Easy to Use",
-    icon: require("@site/static/img/undraw_docusaurus_mountain.svg").default,
-    description: (
-      <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
-      </>
-    ),
-  },
-  {
-    title: "Focus on What Matters",
-    icon: require("@site/static/img/undraw_docusaurus_tree.svg").default,
-    description: (
-      <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
-      </>
-    ),
-  },
-  {
-    title: "Powered by React",
-    icon: require("@site/static/img/undraw_docusaurus_react.svg").default,
-    description: (
-      <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
-      </>
-    ),
-  },
-];
-
-export default function Home(): JSX.Element {
+const Home: React.FC = () => {
   const { siteConfig } = useDocusaurusContext();
+
   return (
     <Layout
       title={`Hello from ${siteConfig.title}`}
       description="Description will go into a meta tag in <head />"
     >
-      <header className={clsx("hero hero--primary", styles.hero)}>
+      {/* Hero */}
+      <header className={clsx("hero hero--primary")}>
         <div className="container">
           <Heading as="h1" className="hero__title">
             {siteConfig.title}
           </Heading>
-          <p className={clsx("hero__subtitle", styles.hero__subtitle)}>
-            {siteConfig.tagline}
-          </p>
-          <div className={styles.buttons}>
+          <p className="hero__subtitle">{siteConfig.tagline}</p>
+          <div className="inline-flex items-center gap-3 mt-6">
             <Link
               className="button button--primary button--lg"
-              to="/docs/getting-started"
+              to="/docs/getting-started/introduction"
             >
               Get Started
             </Link>
           </div>
+          <Badges className="!justify-center mt-6" />
         </div>
       </header>
+
+      {/* Content */}
       <main>
-        <section className={styles.features}>
-          <div className="container">
-            <Feature.Root>
-              {FeatureList.map((props, idx) => (
-                <Feature.Item key={idx} {...props} />
-              ))}
-            </Feature.Root>
-          </div>
-        </section>
+        {/* Features */}
+        <Features />
       </main>
     </Layout>
   );
-}
+};
+
+export default Home;

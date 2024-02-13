@@ -1,61 +1,65 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-/* You can override the default Infima variables here. */
-:root {
-  --ifm-code-font-size: 95%;
-
-  --ifm-color-primary: #3b82f6;
-  --ifm-color-default: #fff;
-  --ifm-color-inverted: #000;
-
-  --ifm-background-color: #fff;
-  --ifm-background-surface-color: #fff;
-
-  --ifm-color-primary-dark: #2570eb;
-  --ifm-color-primary-darker: #1d64d8;
-  --ifm-color-primary-darkest: #1e55af;
-  --ifm-color-primary-light: #609afa;
-  --ifm-color-primary-lighter: #93bbfd;
-  --ifm-color-primary-lightest: #bfd7fe;
-
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+[data-theme="light"] body,
+[data-theme="light"] html {
+  @apply bg-white dark:bg-zinc-900;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
-html[data-theme="dark"] {
-  --ifm-color-primary: #3b82f6;
-  --ifm-color-default: #000;
-  --ifm-color-inverted: #fff;
+.theme-doc-markdown > h1 + * {
+  @apply mt-0;
+}
 
-  --ifm-background-color: #1b1b1d;
-  --ifm-background-surface-color: #242526;
+/* Navbar */
+.navbar {
+  @apply bg-white dark:bg-zinc-800;
+}
 
-  --ifm-color-primary-dark: #2570eb;
-  --ifm-color-primary-darker: #1d64d8;
-  --ifm-color-primary-darkest: #1e55af;
-  --ifm-color-primary-light: #609afa;
-  --ifm-color-primary-lighter: #93bbfd;
-  --ifm-color-primary-lightest: #bfd7fe;
+/* Hero */
+.hero {
+  @apply relative py-16 text-center overflow-hidden h-auto
+  text-black bg-white
+  dark:text-white dark:bg-zinc-900;
+}
 
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+.hero > * {
+  @apply relative z-[1];
+}
 
-  --ifm-navbar-background-color: var(--ifm-background-surface-color);
+.hero::before,
+.hero::after {
+  @apply content-[""] absolute z-0 inset-0;
+}
+
+.hero::before {
+  @apply brightness-[0.85] dark:brightness-[0.20];
+  background-image: url("/static/img/buta-pattern.svg");
+  background-repeat: repeat-x;
+  background-position: center bottom;
+  background-size: 29%;
+}
+
+.hero::after {
+  background: radial-gradient(rgba(0, 0, 0, 0) 0%, rgb(24 24 27) 70%);
+}
+[data-theme="light"] .hero::after {
+  background: radial-gradient(rgba(0, 0, 0, 0) 0%, #fff 70%);
+}
+
+.hero__title {
+  @apply font-bold mb-1;
+}
+.hero__subtitle {
+  @apply text-zinc-600 dark:text-zinc-400 mb-0;
 }
 
 /* Footer */
 .footer {
-  --ifm-footer-background-color: var(--ifm-background-surface-color);
-}
-.footer--dark {
-  --ifm-footer-background-color: var(--ifm-background-surface-color);
+  @apply !bg-zinc-700;
 }
 
 /* Button */
-.button--primary,
-.button--primary:hover {
-  color: #fff;
+.button--primary {
+  @apply text-white hover:text-white;
 }
