@@ -2,8 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-[data-theme="light"] body,
-[data-theme="light"] html {
+body,
+html {
+  @apply !h-auto;
+}
+
+body,
+html[data-theme="light"] {
   @apply bg-white dark:bg-zinc-900;
 }
 

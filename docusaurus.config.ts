@@ -6,7 +6,7 @@ const config: Config = {
   title: "React Ghosta",
   tagline:
     "React popup alerts. Lightweight, customizable and beautiful by default.",
-  favicon: "img/favicon.ico",
+  favicon: "img/favicon.svg",
 
   // Set the production url of your site here
   url: "https://react-ghosta.vercel.app",
