@@ -43,7 +43,10 @@ const config: Config = {
         },
 
         theme: {
-          customCss: "./src/assets/css/global.css",
+          customCss: [
+            "./src/assets/css/global.css",
+            "./node_modules/react-ghosta/dist/ghosta.css",
+          ],
         },
       } satisfies Preset.Options,
     ],
@@ -60,10 +63,8 @@ const config: Config = {
       },
       items: [
         {
-          // type: "docSidebar",
-          // sidebarId: "documentationSidebar",
           label: "Documentation",
-          href: "/docs/getting-started",
+          href: "/docs/getting-started/introduction",
           position: "left",
         },
         {
@@ -81,7 +82,7 @@ const config: Config = {
           items: [
             {
               label: "Documentation",
-              to: "/docs/getting-started",
+              to: "/docs/getting-started/introduction",
             },
           ],
         },
@@ -106,6 +107,22 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
     },
   } satisfies Preset.ThemeConfig,
+
+  themes: ["@docusaurus/theme-live-codeblock"],
+
+  plugins: [
+    async function myPlugin(context, options) {
+      return {
+        name: "docusaurus-tailwindcss",
+        configurePostCss(postcssOptions) {
+          // Appends TailwindCSS and AutoPrefixer.
+          postcssOptions.plugins.push(require("tailwindcss"));
+          postcssOptions.plugins.push(require("autoprefixer"));
+          return postcssOptions;
+        },
+      };
+    },
+  ],
 };
 
 export default config;
