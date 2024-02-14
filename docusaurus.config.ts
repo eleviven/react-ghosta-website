@@ -59,7 +59,8 @@ const config: Config = {
       title: "React Ghosta",
       logo: {
         alt: "React Ghosta",
-        src: "img/logo.svg",
+        src: "img/logo-dark.svg",
+        srcDark: "img/logo.svg",
       },
       items: [
         {

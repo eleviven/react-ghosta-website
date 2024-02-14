@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --ifm-color-primary: #3b82f6;
+}
+
+:root[data-theme="dark"] {
+  --ifm-color-primary: #60a5fa;
+}
+
 body,
 html {
   @apply !h-auto;
@@ -65,6 +73,10 @@ html[data-theme="light"] {
 }
 
 /* Button */
+.button:focus-visible {
+  @apply ring-2 ring-offset-1 transition-all outline-none ring-primary-300 ring-offset-white dark:ring-offset-zinc-900;
+}
 .button--primary {
-  @apply text-white hover:text-white;
+  @apply text-white bg-primary-500 border-transparent
+  hover:text-white hover:bg-primary-600 active:bg-primary-700;
 }
