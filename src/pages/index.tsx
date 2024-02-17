@@ -29,7 +29,7 @@ const Home: React.FC = () => {
               Get Started
             </Link>
           </div>
-          <Badges className="!justify-center mt-6" />
+          <Badges className="!justify-center mt-8" />
         </div>
       </header>
 

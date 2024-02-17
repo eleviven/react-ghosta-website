@@ -13,5 +13,12 @@ import { Badges } from "../../src/widgets"
 ## Playground
 
 import { Playground } from "../../src/widgets"
+import { Schema } from "@site/static/schema"
 
-<Playground/>
+<Playground.Root>
+<Playground.Preview />
+
+## Emitter Options
+
+<Playground.Table data={Schema.GhostaFire} blocklist={["classNames", "buttons", "colors"]} />
+</Playground.Root>
