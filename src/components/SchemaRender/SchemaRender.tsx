@@ -37,13 +37,14 @@ const SchemaRender: React.FC<SchemaRenderProps> = ({
       );
     }
     case "select": {
+      const options = schemaItem.type?.split("|")?.map((i) => i.trim());
       return (
         <select
           name={schemaItem.name}
           value={_value || ""}
           onChange={handleBlur}
         >
-          {schemaItem.options?.map((option) => (
+          {options?.map((option) => (
             <option key={option} value={option}>
               {option}
             </option>

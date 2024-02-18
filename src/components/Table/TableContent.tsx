@@ -7,7 +7,7 @@ const TableContent: React.FC = () => {
 
   return (
     <div className="overflow-x-auto">
-      <table className="w-full table-fixed">
+      <table className="w-full">
         <thead>
           {table.getHeaderGroups().map((headerGroup) => (
             <tr key={headerGroup.id}>

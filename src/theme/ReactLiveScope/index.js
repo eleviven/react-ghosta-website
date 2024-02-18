@@ -11,16 +11,14 @@ const Button = ({ showGradientBorder, ...props }) => {
     </Component.GradientBox>
   );
 };
-const Ghosta = ReactGhosta.Ghosta;
-const ghosta = ReactGhosta.ghosta;
 
 // Add react-live imports you need here
 const ReactLiveScope = {
   React,
   ...React,
+  ...ReactGhosta,
+  ...Component,
   Button,
-  Ghosta,
-  ghosta,
 };
 
 export default ReactLiveScope;

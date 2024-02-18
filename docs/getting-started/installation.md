@@ -55,5 +55,5 @@ function App() {
 }
 ```
 
-ghosta has `fire`, `close`, `closeAll` methods.
+ghosta has `fire`, `close` methods.
 The `fire` method accepts a rich object to display an ideal popup alert for various use cases. We will check them with examples on next pages.
