@@ -43,10 +43,7 @@ const config: Config = {
         },
 
         theme: {
-          customCss: [
-            "./src/assets/css/global.css",
-            "./node_modules/react-ghosta/dist/ghosta.css",
-          ],
+          customCss: ["./src/assets/css/global.css"],
         },
       } satisfies Preset.Options,
     ],
