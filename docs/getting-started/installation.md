@@ -49,7 +49,7 @@ function App() {
       </Button>
 
       {/* Ghosta Container */}
-      <Ghosta />
+      <GhostaContainer />
     </div>
   );
 }

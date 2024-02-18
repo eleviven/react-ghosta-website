@@ -1,6 +1,6 @@
 import type { PlaygroundRootProps } from "./types";
 import { useState } from "react";
-import { Ghosta, GhostaOptions, ghosta } from "react-ghosta";
+import { GhostaContainer, GhostaOptions, ghosta } from "react-ghosta";
 import { PlaygroundContext } from "./PlaygroundContext";
 
 const PlaygroundRoot: React.FC<PlaygroundRootProps> = ({ children }) => {
@@ -44,7 +44,7 @@ const PlaygroundRoot: React.FC<PlaygroundRootProps> = ({ children }) => {
     <PlaygroundContext.Provider value={{ options, handleChangeOption }}>
       {children}
 
-      <Ghosta />
+      <GhostaContainer />
     </PlaygroundContext.Provider>
   );
 };
