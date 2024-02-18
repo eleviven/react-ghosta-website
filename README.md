@@ -1,41 +1,14 @@
-# Website
+<div align="center">
+  <img src="https://badgen.net/npm/v/react-ghosta" alt="NPM Version" />
+  <img src="https://badgen.net/npm/dm/react-ghosta" alt="Monthly Downloads"/>
+  <img src="https://badgen.net/npm/license/react-ghosta" alt="License"/>
+  <img src="https://vercelbadge.vercel.app/api/eleviven/react-ghosta-website" alt="Vercel"/>
+</div>
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+<br />
 
-### Installation
-
-```
-$ yarn
-```
-
-### Local Development
-
-```
-$ yarn start
-```
-
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
-
-### Build
-
-```
-$ yarn build
-```
-
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-### Deployment
-
-Using SSH:
-
-```
-$ USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+<div align="center">
+<a href="https://react-ghosta.vercel.app/docs/getting-started/introduction">Documentation</a> 
+<span> · </span>
+<a href="https://react-ghosta.vercel.app">Website</a> 
+</div>
