@@ -30,7 +30,7 @@ Add the Ghosta and ghosta.css to your app first. It will take care of rendering 
 
 ```jsx live
 // uncomment these lines after paste them to your code editor
-// import { Ghosta, ghosta } from "react-ghosta"
+// import { GhostaContainer, ghosta } from "react-ghosta"
 // import "react-ghosta/dist/ghosta.css"
 
 function App() {
